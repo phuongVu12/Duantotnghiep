@@ -1,0 +1,281 @@
+/* CSS cho bảng sản phẩm */
+.products-table {
+    width: 100%;
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.products-table th,
+.products-table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.products-table th {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+.products-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.btn {
+    padding: 10px 16px;
+    margin: 2px;
+    border-radius: 4px;
+    color: #fff;
+}
+
+.btn-edit {
+    background-color: #007bff; /* Màu xanh cho nút chỉnh sửa */
+}
+
+.btn-edit:hover {
+    background-color: #0351a4; /* Màu xanh đậm hơn khi di chuột */
+    color: #fff;
+}
+
+.btn-delete {
+    background-color: #dc3545; /* Màu đỏ cho nút xóa */
+}
+
+.btn-delete:hover {
+    background-color: #c82333; /* Màu đỏ đậm hơn khi di chuột */
+    color: #fff;
+}
+
+/*PRODUCT EDIT*/
+/* Định dạng cho các phần tử form chỉnh sửa */
+.form-edit {
+    margin-bottom: 16px;
+}
+
+/* Căn chỉnh các nhãn */
+.form-edit label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Định dạng các trường đầu vào */
+.form-edit input[type="text"] {
+    width: calc(
+        100% - 22px
+    ); /* Điều chỉnh chiều rộng để bao gồm padding và border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Bao gồm padding và border trong chiều rộng và chiều cao tổng thể */
+}
+
+/* Định dạng các trường đầu vào khác */
+.form-edit input {
+    width: calc(
+        100% - 22px
+    ); /* Điều chỉnh chiều rộng để bao gồm padding và border */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Bao gồm padding và border trong chiều rộng và chiều cao tổng thể */
+}
+
+/* Định dạng nút hành động */
+.form-actions {
+    margin-top: 20px;
+}
+
+/* Định dạng nút cập nhật */
+.form-actions button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.form-actions button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Định dạng liên kết hủy */
+.btn-cancel {
+    display: inline-block;
+    margin-left: 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    border: 1px solid #007bff;
+    padding: 10px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-cancel:hover {
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+}
+
+/*CREATE PRODUCTS*/
+/* Căn chỉnh form và các phần tử bên trong */
+.form-create {
+    width: 80%;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Căn chỉnh các nhãn */
+.form-create label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Căn chỉnh các trường đầu vào */
+.form-create input[type="text"],
+.form-create input[type="number"],
+.form-create textarea {
+    width: calc(
+        100% - 22px
+    ); /* Adjust width to account for padding and border */
+    padding: 10px;
+    margin-bottom: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+/* Căn chỉnh trường textarea */
+.form-create textarea {
+    height: 100px;
+    resize: vertical; /* Allow vertical resize only */
+}
+
+/* Căn chỉnh nút gửi */
+.form-create button[type="submit"] {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.form-create button[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+/* Căn chỉnh liên kết */
+.form-create a {
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #007bff;
+    font-size: 14px;
+    border: 1px solid blue;
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.form-create a:hover {
+    text-decoration: underline;
+    color: #fff;
+    background-color: #007bff;
+}
+
+/*DETAILS PRODUCTS*/
+/* Định dạng chi tiết sản phẩm */
+.container_show {
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 900px;
+}
+
+.product-details p {
+    margin: 10px 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.product-details strong {
+    color: #333;
+}
+
+/* Định dạng liên kết hành động */
+.action-links {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.action-links a {
+    display: inline-block;
+    margin: 0 10px;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.action-links .btn-edit {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+}
+
+.action-links .btn-edit:hover {
+    background-color: #45a049;
+}
+
+.action-links .btn-delete {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.action-links .btn-delete:hover {
+    background-color: #d32f2f;
+}
+
+.action-links .btn-back {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
+
+.action-links .btn-back:hover {
+    background-color: #0056b3;
+}
+
+.delete-form {
+    display: inline;
+}

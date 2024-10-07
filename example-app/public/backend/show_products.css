@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f7f7f7;
+    padding: 20px;
+    margin: 0;
+}
+
+.container {
+    width: 30%;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    left: 20px;
+    top: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.product-details {
+    margin-bottom: 20px;
+}
+
+.product-details p {
+    margin-bottom: 10px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.action-links {
+    margin-top: 20px;
+}
+
+.action-links a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.action-links a:hover {
+    color: #f3530f;
+    text-decoration: underline;
+}
+
+.action-links button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin: 10px 0;
+}
+
+.action-links button:hover {
+    background-color: #c82333;
+}
