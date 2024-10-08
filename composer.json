@@ -1,0 +1,8 @@
+{
+    "require-dev": {
+        "laravel/breeze": "^2.1"
+    },
+    "require": {
+        "php-flasher/flasher-laravel": "^2.0"
+    }
+}
