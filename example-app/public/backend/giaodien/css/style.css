@@ -94,7 +94,7 @@ header .top-nav .cart_header {
     align-items: center;
     font-size: 14px;
 }
-header .top-nav .cart_header i {
+header .top-nav .cart_header .icon_cart i {
     color: var(--dark-color);
     font-size: 20px;
     border: 1px solid var(--border-color);
@@ -106,10 +106,40 @@ header .top-nav .cart_header i {
     cursor: pointer;
     transition: 0.3s ease;
 }
-header .top-nav .cart_header i:hover {
+
+header .top-nav .cart_header .icon_user i.icon-user {
+    color: var(--dark-color);
+    font-size: 20px;
+    border: 1px solid var(--border-color);
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+header .top-nav .cart_header i.icon-log {
+    color: var(--dark-color);
+    border: none;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+}
+
+header .top-nav .cart_header .icon_cart i.icon-cart:hover {
     background-color: var(--dark-color);
     color: #fff;
 }
+
+header .top-nav .cart_header .icon_user i.icon-user:hover {
+    background-color: var(--dark-color);
+    color: #fff;
+    border: none;
+}
+
 header .top-nav .cart_header .icon_cart {
     position: relative;
 }
@@ -139,7 +169,7 @@ header .links {
 }
 header .links ul {
     display: flex;
-    gap: 70px;
+    gap: 50px;
 }
 header .links ul li a {
     color: var(--dark-color);
@@ -174,6 +204,12 @@ header .links .loging_signup a {
     font-size: 13px;
 }
 /* CSS cho menu drop-down */
+.dropdown_menu {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
 header .links ul li ul {
     display: none;
     position: absolute;
@@ -182,26 +218,73 @@ header .links ul li ul {
     background-color: #fff; /* Màu nền của menu con */
     border: 1px solid #ccc; /* Viền của menu con */
     z-index: 1000; /* Đảm bảo menu con nổi lên trên các phần tử khác */
+    margin: 0;
+    gap: 0;
 }
 
 header .links ul li ul li {
-    float: none;
-    width: 400px; /* Độ rộng của menu con */
+    width: 300px; /* Độ rộng của menu con */
+    padding: 0;
+    margin: 0;
 }
 
 header .links ul li ul li a {
     display: block;
-    padding: 20px 20px;
+    padding: 20px 10px;
     color: #000; /* Màu chữ của menu con */
     text-decoration: none;
+    font-size: 12px;
 }
 
 header .links ul li ul li a:hover {
-    background-color: var(--name-item); /* Màu nền khi hover menu con */
+    background-color: #f3eaea; /* Màu nền khi hover menu con */
 }
 
 header .links ul li:hover > ul {
     display: block;
+}
+
+/*CSS NAV-BAR*/
+.nav-bar {
+    display: none;
+    position: absolute;
+    right: 100px;
+    background-color: #fff; /* Màu nền của menu con */
+    border: 1px solid #ccc; /* Viền của menu con */
+    z-index: 1000; /* Đảm bảo menu con nổi lên trên các phần tử khác */
+    margin: 0;
+    gap: 0;
+    width: 200px;
+    transition: opacity 0.5s ease;
+}
+
+.nav-bar li {
+    padding: 15px 10px;
+}
+
+.nav-bar li.log-out a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #000000;
+    font-size: 15px;
+    padding: 0.5em 0.3em;
+}
+
+.nav-bar .log-out {
+    background-color: #ffffff;
+    font-size: 13px;
+    text-align: center;
+    padding: 0;
+    transform: transition 0.4s ease;
+}
+
+.nav-bar .log-out:hover,
+.nav-bar .log-out:hover a,
+.nav-bar .log-out:hover a i {
+    background-color: #000000;
+    color: #fff;
+    cursor: pointer;
 }
 
 /*---------End Header--------*/

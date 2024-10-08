@@ -8,17 +8,27 @@
             <div class="cart_header">
                 <div onclick="open_cart()" class="icon_cart">
                     <a href="{{route('user.carts.home')}}">
-                        <i class="fa-solid fa-bag-shopping"></i>
+                        <i class="fa-solid icon-cart fa-bag-shopping"></i>
                     </a>
                     <span class="count_item">0</span>
                 </div>
-                <div class="tottal_price">
+                {{-- <div class="tottal_price">
                     <p>Giỏ hàng của tôi:</p>
                     <p class="price_cart_Head">0 ₫</p>
-                </div>
-                <a href="{{route('user.profile.home')}}">
-                    <div  class="icon_cart">
-                        <i class="fa-solid fa-user"></i>
+                </div> --}}
+                {{-- <a href="{{route('user.profile.home')}}"> --}}
+                    <div class="icon_user">
+                        <i class="fa-solid icon-user fa-user"></i>
+                        <span>Hi,</span>
+                        <span class="user_name">{{ Auth::user()->name }}</span>
+                        <ul class="nav-bar">
+                            <li><a href="">Thông tin cá nhân</a></li>
+                            <li><a href="">Liên hệ</a></li>
+                            <li><a href="">Hỗ trợ</a></li>
+                            <li><a href="">Cài đặt</a></li>
+                            <hr>
+                            <li class="log-out"><a href="{{route('logout')}}">Đăng xuất<i class="fa-solid icon-log fa-right-to-bracket"></i></a></li>
+                        </ul>
                     </div>
                 </a>
             </div>
@@ -46,8 +56,8 @@
                     <li><a href="contact.html">Liên hệ</a></li>
                 </ul>
 
-                <div class="loging_signup">
+                {{-- <div class="loging_signup">
                     <a href="{{route('logout')}}">Đăng xuất <i class="fa-solid fa-right-to-bracket"></i></a>
-                </div>
+                </div> --}}
             </div>
         </nav>

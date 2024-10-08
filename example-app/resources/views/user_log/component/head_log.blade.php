@@ -28,14 +28,14 @@
                     <img class="logo_menu" src="img/Logo.png" style="width: 80px; height: 80px;" alt="">
 
                     <li class="active"><a href="{{route('user_log.dashboard')}}">Trang chủ</a></li>
-                        <li class="drop">
-                            <a href="{{route('user_log.products.home')}}">Sản phẩm </a>
-                            <ul class="dropdown_menu">
-                                <li><a href="#">Danh muc san pham</a></li>
-                                <li><a href="#">Bo suu tap</a></li>
-                                <li><a href="#">San pham moi</a></li>
-                            </ul>
-                        </li>
+                    <li class="drop">
+                        <a href="{{route('user_log.products.home')}}">Sản phẩm </a>
+                        <ul class="dropdown_menu">
+                            <li><a href="#">Danh muc san pham</a></li>
+                            <li><a href="#">Bo suu tap</a></li>
+                            <li><a href="#">San pham moi</a></li>
+                        </ul>
+                    </li>
                     <li><a href="{{route('user_log.about.home')}}">Giới thiệu</a></li>
                     <li><a href="post.html">Tin tức</a></li>
                     <li><a href="contact.html">Liên hệ</a></li>
