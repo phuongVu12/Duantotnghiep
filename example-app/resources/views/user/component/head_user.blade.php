@@ -22,12 +22,33 @@
                         <span>Hi,</span>
                         <span class="user_name">{{ Auth::user()->name }}</span>
                         <ul class="nav-bar">
-                            <li><a href="">Thông tin cá nhân</a></li>
-                            <li><a href="">Liên hệ</a></li>
-                            <li><a href="">Hỗ trợ</a></li>
-                            <li><a href="">Cài đặt</a></li>
-                            <hr>
-                            <li class="log-out"><a href="{{route('logout')}}">Đăng xuất<i class="fa-solid icon-log fa-right-to-bracket"></i></a></li>
+                            <div class="user-infor">
+                                <li>
+                                    <div class="user-box">
+                                        <div class="avatar">
+                                            <img src="https://yt3.googleusercontent.com/ijTkRv04f9tiVJL86SRL0ijYjWXD0lOxDBE0USuxqPJh0hLS3NRGWK5S8Lxhc5zX-izZ4rTtI8c=s900-c-k-c0x00ffffff-no-rj" alt="">
+                                        </div>
+                                        <div class="infor">
+                                            <h4>{{ Auth::user()->name }}</h4>
+                                            <p class="text-muted">{{ Auth::user()->email }}</p>
+                                            <a href="{{route('user.profile.home')}}">
+                                                View Profile
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown-user"></div>
+                                    <a class="dropdown-item" href="">Thông tin cá nhân</a>
+                                    <a class="dropdown-item" href="">Liên hệ</a>
+                                    <a class="dropdown-item" href="">Hỗ trợ</a>
+                                    <div class="dropdown-user"></div>
+                                    <a class="dropdown-item" href="">Cài đặt</a>
+                                    <div class="dropdown-user"></div>
+                                    <a class="dropdown-log" href="{{route('logout')}}">Đăng xuất<i class="fa-solid icon-log fa-right-to-bracket"></i></a>
+                                </li>
+                            </div>
+
                         </ul>
                     </div>
                 </a>

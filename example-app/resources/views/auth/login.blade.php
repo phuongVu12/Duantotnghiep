@@ -1,5 +1,5 @@
 
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -13,12 +13,11 @@
     <!-- Main css -->
     <link rel="stylesheet" href="backend/login/css/style.css">
 </head>
-<body>
-
+<body> --}}
     <div class="main">
         <!-- Sing in  Form -->
         <section class="sign-in">
-            <div class="container">
+            <div class="container-login">
                 <div class="signin-content">
                     <div class="signin-image">
                         <figure><img src="backend/login/images/signin-image.jpg" alt="sing up image"></figure>
@@ -62,11 +61,9 @@
                 </div>
             </div>
         </section>
-
     </div>
-
     <!-- JS -->
-    <script src="backend/login/vendor/jquery/jquery.min.js"></script>
+    {{-- <script src="backend/login/vendor/jquery/jquery.min.js"></script>
     <script src="backend/login/js/main.js"></script>
 </body><!-- This templates was made by Colorlib (https://colorlib.com) -->
-</html>
+</html> --}}

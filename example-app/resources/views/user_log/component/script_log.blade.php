@@ -6,3 +6,6 @@
 <script src="/backend/giaodien/js/product.js"></script>
 <script src="/backend/giaodien/js/main.js"></script>
 
+<script src="backend/login/vendor/jquery/jquery.min.js"></script>
+<script src="backend/login/js/main.js"></script>
+

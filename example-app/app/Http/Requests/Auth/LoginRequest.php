@@ -43,7 +43,7 @@ class LoginRequest extends FormRequest
 
         if (! Auth::attempt($this->only('email', 'password'), $this->boolean('remember'))) {
             RateLimiter::hit($this->throttleKey());
-            flash()->error('Đăng nhập thất bại');
+            toastr()->error('Email hoặc mật khẩu không đúng');
             throw ValidationException::withMessages([
                 'email' => 'Email hoặc mật khẩu không đúng.',
             ]);

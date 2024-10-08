@@ -5,9 +5,10 @@
 <section class="account-info">
     <div class="account-details">
         <h4>Thông tin tài khoản</h4>
-        <p>Xin chào, <span>Nguyễn Văn A</span></p> <!-- Tên khách hàng -->
+        <p>Xin chào, <span>{{ Auth::user()->name }}</span></p> <!-- Tên khách hàng -->
         <h2>Thông tin khách hàng</h2>
-        <p><i class="fa-solid fa-user"></i> Họ và Tên: <span>Nguyễn Văn A</span></p> <!-- Họ và tên -->
+        <p><i class="fa-solid fa-user"></i> Họ và Tên: <span>{{ Auth::user()->name }}</span></p> <!-- Họ và tên -->
+        <p><i class="fa-solid fa-user"></i> Email : <span>{{ Auth::user()->email }}</span></p> <!-- Họ và tên -->
         <p><i class="fa-solid fa-phone"></i> Số điện thoại: <span>0123456789</span></p> <!-- Số điện thoại -->
         <p><i class="fa-solid fa-location-dot"></i> Địa chỉ: <span>123 Đường ABC, Quận 1, TP.HCM</span></p> <!-- Địa chỉ -->
         <a href="path/to/account_update" class="btn">Sửa thông tin</a>
