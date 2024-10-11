@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
     "name": "laravel/laravel",
     "type": "project",
     "description": "The skeleton application for the Laravel framework.",
@@ -65,4 +66,12 @@
     },
     "minimum-stability": "stable",
     "prefer-stable": true
+=======
+    "require-dev": {
+        "laravel/breeze": "^2.1"
+    },
+    "require": {
+        "php-flasher/flasher-laravel": "^2.0"
+    }
+>>>>>>> 6a898527f88915208dc0e3bd635b163cff0c8b12
 }
