@@ -1,0 +1,19 @@
+.error-message {
+    color: red;
+    font-size: 13px;
+    font-style: inherit;
+}
+
+.fogot {
+    text-decoration: none;
+    color: rgb(57, 93, 225);
+    font-size: 13px;
+}
+
+.fogot:hover {
+    color: rgb(238, 78, 78);
+}
+
+.card {
+    margin-top: 15px;
+}

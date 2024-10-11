@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+    margin: 0;
+    padding: 20px;
+    max-width: 100%;
+}
+
+h1 {
+    color: #333;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap; /* Cho phép các phần tử li tự động xuống hàng */
+    gap: 20px; /* Khoảng cách giữa các sản phẩm */
+}
+
+li {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 0 calc(40% - 20px); /* Điều chỉnh chiều rộng của từng sản phẩm */
+    max-width: calc(
+        30% - 20px
+    ); /* Giới hạn chiều rộng tối đa của từng sản phẩm */
+    margin-bottom: 20px; /* Khoảng cách dưới giữa các sản phẩm */
+}
+
+a {
+    text-decoration: none;
+    color: black;
+    transition: 0.3s ease;
+}
+
+li:hover {
+    background-color: #f0f0f0;
+}
+
+.action-links {
+    float: right;
+}
+
+.action-links a:hover {
+    color: #dc3545;
+}
+
+button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c82333;
+}

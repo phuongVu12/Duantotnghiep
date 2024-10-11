@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+header {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    border-bottom: 1px solid #dedede;
+}
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Căn chỉnh các phần tử cách đều nhau */
+    align-items: center; /* Căn giữa theo chiều dọc */
+    border-bottom: 1px solid transparent; /* Đường kẻ trong suốt để tạo khoảng cách */
+    font-family: "Raleway", sans-serif;
+}
+
+.navbar::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 3%; /* Khoảng cách từ bên trái */
+    right: 3%; /* Khoảng cách từ bên phải */
+    border-bottom: 1px solid #d2d1d1; /* Độ dày và màu của đường kẻ */
+}
+
+.navbar .container-fluid {
+    display: flex;
+    justify-content: space-between; /* Căn chỉnh các phần tử cách đều nhau */
+    align-items: center; /* Căn giữa theo chiều dọc */
+}
+.navbar .d-flex {
+    flex: 1;
+    display: flex;
+    justify-content: center; /* Căn giữa các phần tử trong form */
+}
+.navbar .navbar-brand {
+    flex: 1;
+    text-align: center; /* Căn giữa logo */
+}
+.navbar .navbar-nav {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end; /* Căn phải các phần tử điều hướng */
+    font-size: 14px;
+}
+
+.form-control {
+    width: 350px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+    font-size: 13px;
+}
+
+.form-control:focus {
+    width: 350px;
+    outline: none;
+    box-shadow: none;
+    border: none;
+}
+
+.container-fluid .navbar-brand .logo-header {
+    width: 170px;
+    height: auto;
+}
+
+h1 {
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+}
+
+/*CSS MENU*/
+
+.menu-link {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.menu-header ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.menu-header ul li {
+    position: relative;
+    margin: 10px 20px;
+    list-style: none;
+    font-size: 13px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.menu-header ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.menu-link li::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 0.3px;
+    background-color: black;
+    transition: transform 0.3s ease;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.menu-link li.active::after {
+    transform: scaleX(1); /* Hiển thị đường gạch khi có lớp 'active' */
+}
+
+/*MENU HOVER*/
+
+.menu-item {
+    position: relative;
+}
+
+.hover-menu {
+    position: fixed;
+    left: 0; /* Đặt phần tử bắt đầu từ bên trái màn hình */
+    margin-top: -20px;
+    opacity: 0;
+    z-index: -999;
+    display: flex;
+    font-family: "Raleway", sans-serif;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 60px 120px;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.menu-header ul li:hover .hover-menu {
+    z-index: 90;
+    margin-top: 0;
+    background: #fff;
+}
+
+.hover-menu .city-love {
+    display: flex;
+    flex-direction: column;
+}
+
+.hover-menu .city-love a {
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+    padding: 3px 0;
+    font-size: 12px;
+}
+
+.hover-menu .city-love a:hover {
+    color: #5b5a5a;
+}
+
+.hover-menu .city-love .all {
+    font-weight: 600;
+    padding-bottom: 10px;
+}
+
+/*HOVER IMG*/
+
+.in-pic {
+    text-align: center;
+    flex: 20%; /* Điều chỉnh phần tử để phù hợp với kích thước container */
+    overflow: hidden;
+}
+
+.in-pic h1 {
+    font-size: 13px;
+    padding-top: 20px;
+    font-weight: 500;
+}
+
+.in-pic h4 {
+    font-size: 11px;
+}
+
+.in-pic img {
+    width: 96%;
+    height: auto;
+    transition: transform 0.3s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transform-origin: center;
+}
+
+.pic-city {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 50px;
+}
+
+/*24-LOOKBOOK*/
+
+.hover-menu .lookbook {
+    margin-left: 60px;
+    width: 20%;
+}
+
+.hover-menu .lookbook a {
+    display: block;
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+    font-size: 12px;
+    padding: 5px 0;
+}
+
+.hover-menu .lookbook {
+    display: flex;
+    flex-direction: column;
+}
+
+.lookbook a.all-look {
+    display: block;
+    font-weight: 600;
+    padding-top: 3px;
+    padding-bottom: 10px;
+}
+
+/*FOOTER*/
+.form-footer {
+    padding-top: 40px;
+    border-top: 1px solid #dedede;
+}
+
+.out-form {
+    padding: 0 30px;
+}
+
+.form-input {
+    display: flex;
+    justify-content: space-between;
+}
+
+.in-form h1 {
+    font-size: 12px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.in-form .footer-item p {
+    font-size: 13px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.in-form .input-foot {
+    display: flex;
+    width: 270px;
+    height: 50px;
+    border: 1px solid #dedede;
+    align-items: center;
+    justify-content: center;
+    transition: all ease 0.3s;
+}
+
+.in-form .input-foot:focus-within {
+    border: 1px solid black;
+}
+
+.in-form .input-foot input {
+    width: 240px;
+    height: 100%;
+    border: none;
+    font-size: 13px;
+    box-sizing: border-box;
+}
+
+.in-form .input-foot input:focus {
+    border: none;
+    outline: none;
+}
+
+.input-foot i {
+    cursor: pointer;
+    font-size: 17px;
+    padding-right: 10px;
+}
+
+.footer-item-content ul li {
+    list-style: none;
+}
+
+.ul-item {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-item-content ul li a {
+    font-size: 13px;
+    text-decoration: none;
+    color: black;
+    font-weight: 400;
+}
+
+ul.ul-item li {
+    padding: 5px 0;
+}
+
+.footer-item-content-icon {
+    display: flex;
+}
+
+ul.ul-item-icon {
+    padding: 0;
+}
+
+ul.ul-item-icon li {
+    list-style: none;
+    border: 1px solid #dedede;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Để có thể định vị phần tử con chính xác */
+    overflow: hidden; /* Đảm bảo nền không tràn ra ngoài kích thước của li */
+}
+
+ul.ul-item-icon li .background-overlay {
+    position: absolute;
+    top: 100%; /* Đặt nền ở dưới thẻ li, ngoài tầm nhìn */
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: black; /* Màu nền có thể thay đổi tùy theo sở thích */
+    transition: top 0.3s ease; /* Hiệu ứng chuyển động mượt mà khi hover */
+}
+
+ul.ul-item-icon li:hover .background-overlay {
+    top: 0; /* Đưa nền từ dưới lên trên khi hover */
+}
+
+ul.ul-item-icon li a {
+    color: black;
+    font-size: 17px;
+    transition: color 0.3s ease; /* Thay đổi màu của biểu tượng khi hover */
+    position: relative; /* Để đảm bảo rằng các biểu tượng nằm trên nền */
+    z-index: 1; /* Đảm bảo rằng các biểu tượng nằm trên nền */
+}
+
+ul.ul-item-icon li:hover a {
+    color: #fff;
+}
+
+/*hover*/
