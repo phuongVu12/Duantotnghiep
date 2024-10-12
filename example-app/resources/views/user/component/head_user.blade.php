@@ -30,7 +30,9 @@
                                         </div>
                                         <div class="infor">
                                             <h4>{{ Auth::user()->name }}</h4>
-                                            <p class="text-muted">{{ Auth::user()->email }}</p>
+                                            <div class="email">
+                                                <p class="text-muted">{{ Auth::user()->email }}</p>
+                                            </div>
                                             <a href="{{route('user.profile.home')}}">
                                                 View Profile
                                             </a>
@@ -48,7 +50,6 @@
                                     <a class="dropdown-log" href="{{route('logout')}}">Đăng xuất<i class="fa-solid icon-log fa-right-to-bracket"></i></a>
                                 </li>
                             </div>
-
                         </ul>
                     </div>
                 </a>
@@ -64,14 +65,26 @@
                     <img class="logo_menu" src="img/Logo.png" style="width: 80px; height: 80px;" alt="">
 
                     <li class="active"><a href="{{route('user.dashboard')}}">Trang chủ</a></li>
-                        <li class="drop">
-                            <a href="{{route('user.products.home')}}">Sản phẩm </a>
-                            <ul class="dropdown_menu">
-                                <li><a href="#">Danh muc san pham</a></li>
-                                <li><a href="#">Bo suu tap</a></li>
-                                <li><a href="#">San pham moi</a></li>
-                            </ul>
-                        </li>
+                    <li class="drop">
+                        <a href="{{route('user.products.home')}}">Sản phẩm </a>
+                        <ul class="dropdown_menu">
+                            <li class="drop_con">
+                                <a href="#">Danh muc san pham</a>
+                                <ul class="in_con">
+                                    <li><a href="{{route('user.product.nam_product')}}">Thoi trang nam</a></li>
+                                    <li><a href="#">Thoi trang nu</a></li>
+                                </ul>
+                            </li>
+                            <li class="drop_con">
+                                <a href="#">Bo suu tap</a>
+                                <ul class="in_con">
+                                    <li><a href="#">Thoi trang nam</a></li>
+                                    <li><a href="#">Thoi trang nu</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">San pham moi</a></li>
+                        </ul>
+                    </li>
                     <li><a href="{{route('user.abouts.home')}}">Giới thiệu</a></li>
                     <li><a href="post.html">Tin tức</a></li>
                     <li><a href="contact.html">Liên hệ</a></li>

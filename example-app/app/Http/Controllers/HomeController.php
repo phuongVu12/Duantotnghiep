@@ -16,7 +16,7 @@ class HomeController extends Controller
     public function user_index()
     {
         $template = 'user.home.index';
-        toastr()->success('dang nhap thanh cong');
+        // toastr()->success('dang nhap thanh cong');
         return view('user.dashboard',compact('template'));
     }
 

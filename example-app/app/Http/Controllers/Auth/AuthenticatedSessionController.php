@@ -30,9 +30,12 @@ class AuthenticatedSessionController extends Controller
         $request->session()->regenerate();
 
         if ($request -> user()->usertype == 'admin') {
-            return redirect('admin.dashboard');
+           return redirect()->route('admin.dashboard');
         }
-        return redirect()->intended(route('user.dashboard', absolute: false));
+         if ($request -> user()->usertype == 'nv_product') {
+           return redirect()->route('admin.dashboard');
+        }
+        return redirect()->intended(route('user.dashboard'));
     }
 
     /**

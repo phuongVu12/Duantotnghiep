@@ -46,32 +46,32 @@
 
                         <div class="item">
                             <span>Lining</span>
-                            <input type="checkbox">
+                            <input type="checkbox" id="hang1">
                         </div>
 
                         <div class="item">
                             <span>Yonex</span>
-                            <input type="checkbox">
+                            <input type="checkbox" id="hang2">
                         </div>
 
                         <div class="item">
                             <span>Victor</span>
-                            <input type="checkbox">
+                            <input type="checkbox" id="hang3">
                         </div>
 
                         <div class="item">
                             <span>Adidas</span>
-                            <input type="checkbox">
+                            <input type="checkbox" id="hang4">
                         </div>
 
                         <div class="item">
                             <span>Nike</span>
-                            <input type="checkbox">
+                            <input type="checkbox" id="hang5">
                         </div>
 
                         <div class="item">
                             <span>MLB</span>
-                            <input type="checkbox">
+                            <input type="checkbox" id="hang6">
                         </div>
 
                     </div>
@@ -83,27 +83,27 @@
 
                         <div class="item">
                             <span class="color" style="background: red;"></span>
-                            <input type="checkbox">
+                            <input type="checkbox" id="mau1">
                         </div>
 
                         <div class="item">
                             <span class="color" style="background: blue;"></span>
-                            <input type="checkbox">
+                            <input type="checkbox" id="mau2">
                         </div>
 
                         <div class="item">
                             <span class="color" style="background: green;"></span>
-                            <input type="checkbox">
+                            <input type="checkbox" id="mau3">
                         </div>
 
                         <div class="item">
                             <span class="color" style="background: yellow;"></span>
-                            <input type="checkbox">
+                            <input type="checkbox" id="mau4">
                         </div>
 
                         <div class="item">
                             <span class="color" style="background: pink;"></span>
-                            <input type="checkbox">
+                            <input type="checkbox" id="mau5">
                         </div>
 
                     </div>

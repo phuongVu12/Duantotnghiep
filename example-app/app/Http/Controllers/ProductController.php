@@ -85,6 +85,12 @@ class ProductController extends Controller
         return view('user.dashboard', compact(['template']));
     }
 
+      public function nam_product()
+    {
+        $template = 'user.product.nam_product';
+        return view('user.dashboard', compact(['template']));
+    }
+
     public function user_cart()
     {
         $template = 'user.cart.home';

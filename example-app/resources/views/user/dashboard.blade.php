@@ -27,7 +27,7 @@
 <body>
     <header>
         <div class="header">
-            @include('user.component.head_user');
+            @include('user.component.head_user')
         </div>
     </header>
 

@@ -16,10 +16,15 @@ class Admin
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if(Auth::user() -> usertype !='admin'){
-            flash()->success ('Đăng nhập thành công');
-            return redirect()->route('user.dashboard');
+        if (Auth::check())
+         {$usertype = Auth::user()->usertype;
+    // Kiểm tra xem người dùng không phải là admin và không phải là nv_product
+        if ($usertype != 'admin' && $usertype != 'nv_product')
+        {
+        return redirect()->route('user.dashboard');
         }
+    // Nếu là admin hoặc nv_product, thực hiện các hành động khác ở đây
+    }
         return $next($request);
     }
 }

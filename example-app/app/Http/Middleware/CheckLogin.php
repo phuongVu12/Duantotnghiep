@@ -18,8 +18,12 @@ class CheckLogin
     {
 
         if (!Auth::check() && $request->is('admin/products')) {
-            flash()->warning('Đăng nhập để thực hiện chức năng này');
+            toastr()->warning('Đăng nhập để thực hiện chức năng này');
             return redirect()->route('login');
+        }
+        if (Auth::user() -> usertype !='admin' && $request->is('admin/products')) {
+            toastr()->error('Bạn không đủ quyền hạn truy cập trang này');
+            return redirect() -> back() ;
         }
         return $next($request);
     }

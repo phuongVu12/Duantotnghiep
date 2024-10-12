@@ -22,6 +22,12 @@ Route::middleware('auth')->group(function () {
 });
 
 
+
+
+
+
+
+
 Route::middleware('auth','admin')->group(function (){
    Route::get('admin.dashboard',[HomeController::class,'index'])
    ->middleware([Admin::class])->name('admin.dashboard');
@@ -39,8 +45,10 @@ Route::get('/',[HomeController::class,'welcome']);
 Route::get('user.dashboard',[HomeController::class,'user_index'])->name('user.dashboard');
 Route::get('user/profile',[HomeController::class,'user_profile'])->name('user.profile.home');
 Route::get('user/products',[ProductController::class,'user_product'])->name('user.products.home');
+Route::get('nam/product',[ProductController::class,'nam_product'])->name('user.product.nam_product');
 Route::get('user/carts',[ProductController::class,'user_cart'])->name('user.carts.home');
 Route::get('user/abouts',[ProductController::class,'user_about'])->name('user.abouts.home');
+
 
 
 
