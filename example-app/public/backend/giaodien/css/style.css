@@ -756,13 +756,16 @@ li a.dropdown-item {
     padding: 4px 12px;
     font-size: 14px;
 }
+
 .product .img_product {
     position: relative;
 }
+
 .product .img_product img {
     width: 100%;
     transition: 0.3s ease-in-out;
 }
+
 .product .img_product .img_hover {
     position: absolute;
     top: 0;
@@ -771,13 +774,16 @@ li a.dropdown-item {
     opacity: 0;
     scale: 0.1;
 }
+
 .product:hover .img_product img {
     opacity: 0;
 }
+
 .product:hover .img_product .img_hover {
     opacity: 1;
     scale: 1;
 }
+
 .product .name_product {
     font-size: 18px;
 }
@@ -1742,12 +1748,15 @@ header .links ul .btn_close_menu {
 
 .product_nam .sp_nam {
     display: flex;
+    border-bottom: 1px solid #f1f1f1;
+    padding-bottom: 14px;
+    margin-bottom: 25px;
 }
 
 .sp_nam .in_product {
     width: 20%;
     height: auto;
-    margin: 10px 30px;
+    margin: 10px 13px;
 }
 
 .in_product p.name {
@@ -1767,6 +1776,93 @@ header .links ul .btn_close_menu {
 .img_product img {
     width: 100%;
 }
+
+
+/*PRODUCT_NAM HOVER*/
+
+.img_product {
+    position: relative; /* Để ảnh hover nằm chồng lên ảnh chính */
+    cursor: pointer;
+}
+
+.img_product .hover {
+    position: absolute; /* Đặt ảnh hover lên trên ảnh chính */
+    top: 0; /* Đảm bảo ảnh hover nằm đúng vị trí */
+    left: 0;
+    opacity: 0; /* Ẩn ảnh hover ban đầu */
+}
+
+.img_product:hover .home_product {
+    opacity: 0; /* Ẩn ảnh chính khi hover */
+}
+
+.img_product:hover .hover {
+    opacity: 1; /* Hiện ảnh hover khi hover */
+}
+
+
+
+
+/*PRODUCT_NAM LỌC SẢN PHẨM*/
+
+.product_nam .loc_sp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 95%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+.product_nam .loc_sp .drop_loc {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+
+}
+
+.loc_sp .sp_hienco p {
+    font-size: 15px;
+    font-weight: 600;
+    color: black;
+}
+
+.loc_sp .drop_loc span{
+    font-size: 12px;
+    color: #505050;
+}
+
+.loc_sp .drop_loc .dropdown_sp {
+    width: 176px;
+    border-radius: 20px;
+    display: inline-block;
+    height: 44px;
+    align-items: center;
+    display: flex;
+    padding: 0 10px;
+}
+
+.loc_sp .drop_loc .dropdown_sp button {
+    width: 100%;
+    height: auto;
+    border: none;
+    cursor: pointer;
+    background-color: #F1F1F1;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    gap: 60px;
+    align-items: center;
+    padding-left: 13px;
+    font-size: 14px;
+    color: #505050;
+}
+
+.loc_sp .drop_loc .dropdown_sp button i {
+    /* margin-left: 10px; */
+}
+
+/*-------------------END PRODUCT_NAM LỌC SẢN PHẨM*/
 /*----------------------Chechbox--------------------------*/
 .checkbox {
     display: flex;
@@ -1841,6 +1937,134 @@ input[type="checkbox"]:checked + label::before {
 .select_size input:checked ~ label span {
     color: #fff;
 }
+
+/*---------------END SELECT SIZE----------------------*/
+
+
+
+/*---------------STAR SELECT COLOR----------------------*/
+.search_color {
+display: grid;
+grid-template-columns: repeat(4, 1fr);
+margin-top: 40px;
+margin-right: 10px;
+gap: 20px;
+}
+
+.checkbox_color {
+    align-items: center;
+    margin-bottom: 10px;
+    width: 100%;
+    height: auto;
+}
+
+.search_color .checkbox_color input {
+display: none;
+}
+
+.checkbox_color span {
+    text-align: center;
+    width: 100%;
+    font-size: 13px;
+    color: #918F8F;
+}
+.checkbox_color label {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+.checkbox_color label .color::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    transform: translate(-50%, -80%); /* Điều chỉnh vị trí cho chính xác */
+    border: 1px solid #918f8f; /* Viền của hình tròn */
+    border-radius: 50%; /* Làm cho hình dạng tròn */
+}
+
+.checkbox_color label .color.-xanhla::before {
+    background-color: #557C56;
+}
+.checkbox_color label .color.-den::before {
+    background-color:black;
+}
+.checkbox_color label .color.-xam::before {
+    background-color: #ABABAB;
+}
+.checkbox_color label .color.-trang::before {
+    background-color: #F6F6F6;
+}
+.checkbox_color label .color.-lam::before {
+    background-color: #1E46BF;
+}
+.checkbox_color label .color.-nau::before {
+    background-color: #9E6D29;
+}
+.checkbox_color label .color.-be::before {
+    background-color: #F4EBD7;
+}
+.checkbox_color label .color.-reu::before {
+    background-color: #3D6420;
+}
+
+
+
+/*---------------END SELECT COLOR----------------------*/
+
+
+/*---------------STAR SELECT CHAT LIEU----------------------*/
+
+
+.chatlieu {
+    display: flex;
+    align-items: center;
+}
+
+.check_search .chatlieu input {
+display: none;
+outline: none;
+}
+
+.chatlieu span {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 400;
+    cursor: pointer;
+}
+.chatlieu label {
+    position: relative;
+    cursor: pointer;
+    padding-left: 34px; /* Khoảng cách cho biểu tượng checkbox */
+}
+
+.chatlieu label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 18px; /* Đường kính của hình tròn */
+    height: 18px; /* Đường kính của hình tròn */
+    border: 2px solid #918f8f; /* Viền của hình tròn */
+    border-radius: 10%; /* Làm cho hình dạng tròn */
+    background-color: white; /* Màu nền của hình tròn */
+    transition: background-color 0.3s, border-color 0.3s; /* Hiệu ứng chuyển đổi */
+}
+
+input[type="checkbox"]:checked + .chatlieu label::before {
+    background-color: #2f5acf; /* Màu nền khi được chọn */
+    border-color: #918f8f; /* Màu viền khi được chọn */
+}
+
+/*---------------END SELECT CHAT LIEU----------------------*/
+
+
+
 
 /*--------------------------------Start Page Checkout---------------------------*/
 
